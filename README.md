@@ -21,7 +21,7 @@ python -c "import tkinter; print(tkinter.TkVersion)"
 ## Установка и запуск
 Склонируйте или скачайте проект и выполните:
 ```bash
-cd /home/vaddy/tic_tac_toe
+cd ./tic_tac_toe
 python run.py
 ```
 
