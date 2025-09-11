@@ -32,6 +32,7 @@ python run.py
 /tic_tac_toe_game/
 ├─ app        # основной исходный код (Tkinter + класс TicTacToeApp)
     ├─ tic_tac_toe.py
+├─ run.py     # запуск игры
 └─ venv/             # (необязательно) виртуальное окружение
 ```
 
