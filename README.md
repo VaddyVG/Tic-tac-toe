@@ -22,7 +22,7 @@ python -c "import tkinter; print(tkinter.TkVersion)"
 Склонируйте или скачайте проект и выполните:
 ```bash
 cd /home/vaddy/tic_tac_toe
-python tic_tac.py
+python run.py
 ```
 
 Откроется окно с полем 3×3. Нажимайте на клетки, чтобы делать ходы.
