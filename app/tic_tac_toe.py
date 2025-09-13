@@ -112,18 +112,32 @@ class TicTacToeApp:
         if result in ("X", "O"):
             self.game_over = True
             messagebox.showinfo("Игра окончена", f"Победил игрок {result}!")
-            self.reset_game()
+            self.show_game_menu()
             return
         if result == "Tie":
             self.game_over = True
             messagebox.showinfo("Игра окончена", "Ничья!")
-            self.reset_game()
+            self.show_game_menu()
             return
 
         # Переход хода к другому игроку
         self.current_player = "O" if self.current_player == "X" else "X"
         self.status_text.set(f"Ход игрока {self.current_player}")
-    
+
+    def show_game_menu(self) -> None:
+        """Показывает меню с выбором: Новая партия или выход."""
+        choice = messagebox.askyesnocancel(
+            "Выбор действия",
+            "Хотите начать новую партию?",
+            detail="Да - Новая партия\nНет - Выход\nОтмена - Остаться в партии",
+            icon="question"
+        )
+
+        if choice is True:  # Да - Новая партия
+            self.reset_game()
+        elif choice is False:  # Нет - Выход
+            self.root.quit()
+
     def run(self) -> None:
         """Запуск главного цикла приложения Tkinter."""
         self.root.mainloop()
